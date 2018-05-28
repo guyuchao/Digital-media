@@ -7,36 +7,36 @@
 
 >Description: 胡伟老师15级数字媒体课程设计，完成了numpy优化的基础图片处理以及目标移除、灰度上色、图像去雾、图像检索等高级处理，此外，本系统综合了mysql与七牛云数据库，完成图片数据的存储管理。
 
-##结果展示
+## 结果展示
 
-###图像去雾
+### 图像去雾
 实现了何凯明的《Single Image Haze Removal Using Dark Channel Prior》和引导滤波，配合前端展示
 
 ![](./readmeDisplay/dehaze.gif)
 
-###灰度图上色
+### 灰度图上色
 实现了论文 Levin et. al《Colorization Using Optimization》，配合前端canvas交互，完成交互上色功能
 
 ![](./readmeDisplay/color.gif)
 
-###目标移除
+### 目标移除
 实现了Shai Avidan 的《Seam Carving for Content-Aware Image Resizing》，将基础的seam carving与论文中提出的基于seam的object remove结合，配合前端canvas的交互标记区域，实现交互删除功能
 
 ![](./readmeDisplay/objectrm.gif)
 
-###图像检索
+### 图像检索
 基于sift特征点提取和特征聚类，flann快速匹配，实现快速图像检索功能。调用了opencv相应函数，配合前端展示。
 
-###基础图像处理
+### 基础图像处理
 * 对比度，亮度，饱和度调整，全是手工实现，其中转换hsv与rgb的算法，用numpy优化过，没有出现for循环，加快了处理效率
 * 各种滤波方法，全是手工实现
 
-##局限与不足
+## 局限与不足
 本课设存在以下局限，供参考者改进：
 
 * seam-carving没有完成基于seam的enlarge，目标移除后只是简单的scale成原尺寸，若删除区域过大可能失真
 
-##代码结构
+## 代码结构
 ```
 Image Process System
 │
@@ -90,5 +90,5 @@ Image Process System
 
 * 编程环境:`pycharm`
 
-##致谢
+## 致谢
 本课设感谢胡伟老师对算法的指导以及  [`wlj961012`](https://github.com/wlj961012/DigitalMedia) 提供的关于图像检索的理解与参考代码
